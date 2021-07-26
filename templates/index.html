@@ -1,0 +1,13 @@
+<html>
+   <body>
+   {% if error %}
+    <p class=error><strong>Error:</strong> {{ error }}
+  {% endif %}
+      <form action = "/" method = "post">
+         <p>Enter the stock symbol :</p>
+         <p><input type = "text" name = "symbol" /></p>
+         <p>Enter the stock position:</p>
+         <p><input type = "number" name = "qte" /></p>
+         <p><input type = "submit" value = "submit" /></p>
+   </body>
+</html>

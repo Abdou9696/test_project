@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/tab.css') }}" media="all" />
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2></h2>
+<p></p>
+
+<table class="styled-table">
+  <thead>
+  <tr>
+    <th> Ticker </th>
+    <th>regular Market Previous Close </th>
+    <th>Position</th>
+	<th> Notional </th>
+  </tr>
+  </thead>
+  <tr class="active-row">
+    <td> {{name}} </td>
+    <td>{{price}} $</td>
+    <td>{{pos}}</td>
+    <td>{{notional}} $</td>
+  </tr>
+</table>
+</body>
+</html>
