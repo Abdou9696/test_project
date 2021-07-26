@@ -1,13 +1,16 @@
 <html>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/input.css') }}" media="all" />
    <body>
+   <div class="login" >
    {% if error %}
     <p class=error><strong>Error:</strong> {{ error }}
   {% endif %}
       <form action = "/" method = "post">
          <p>Enter the stock symbol :</p>
-         <p><input type = "text" name = "symbol" /></p>
+         <p><input type = "text" name = "symbol" required /></p>
          <p>Enter the stock position:</p>
-         <p><input type = "number" name = "qte" /></p>
-         <p><input type = "submit" value = "submit" /></p>
+         <p><input type = "number" name = "qte" min="1" value="1" /></p>
+         <p><input type = "submit" value = "submit"  class="btn btn-primary btn-block btn-large"/></p>
+   </div>
    </body>
 </html>
